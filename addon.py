@@ -4,7 +4,7 @@
 # 2015 techdealer
 
 ##############LIBRARIES TO IMPORT AND SETTINGS####################
-import sys,urllib,urllib2,re,xbmcplugin,xbmcgui,xbmc,xbmcaddon,HTMLParser,httplib
+import sys,urllib,urllib2,re,xbmcplugin,xbmcgui,xbmc,xbmcaddon
 
 addon_id = 'script.teletextopt'
 selfAddon = xbmcaddon.Addon(id=addon_id)
@@ -44,7 +44,7 @@ class TeletextWindow(xbmcgui.WindowDialog):
 				self.channel = tmp_channel
 				self.page = 100
 				self.Open_page()
-		
+
 	def onAction(self, action):
 		action_id = action.getId()
 		if action_id == 1: #previous sub_page
@@ -76,7 +76,7 @@ class TeletextWindow(xbmcgui.WindowDialog):
 				self.channel = tmp_channel
 				self.page = 100
 				self.Open_page()
-		
+
 	def Open_page(self):
 		self.sub_page = 1
 		
@@ -106,7 +106,7 @@ class TeletextWindow(xbmcgui.WindowDialog):
 		self.addControl(self.anterior)
 		self.proximo = xbmcgui.ControlButton(1202,652,80,70,'',focusTexture=addonfolder+artfolder+'proximo.png', noFocusTexture=addonfolder+artfolder+'proximo.png')
 		self.addControl(self.proximo)
-		
+
 	def Change_sub_page(self):
 		self.background = xbmcgui.ControlImage(0,0,1280,720,self.txt_array[self.sub_page-1])
 		self.addControl(self.background)
@@ -128,21 +128,21 @@ class TeletextWindow(xbmcgui.WindowDialog):
 #TELETEXT FUNCTIONS
 	
 def Page_Search():
-    page = xbmcgui.Dialog().numeric(0,'Abrir a página...')
-    page=int(page)
-    if page>888 or page<100:
-        Page_Search()
-    else:
+	page = xbmcgui.Dialog().numeric(0,'Abrir a página...')
+	page=int(page)
+	if page>888 or page<100:
+		Page_Search()
+	else:
 		return page
-		
+
 def Choose_channel():
 	channel = xbmcgui.Dialog().select('Escolha um canal...', channel_list)+1
 	return channel
-    
+
 def Open_Teletext(channel,page):
 	window = TeletextWindow(channel,page)
 	window.doModal()
-	
+
 ###################################################################################
 #TELETEXT RESOLVERS
 
@@ -201,6 +201,5 @@ channel_list = ['RTP']
 if len(channel_list) > 1: channel = Choose_channel()
 else: channel = 1
 
-if channel == 0:
-	sys.exit(0)
+if channel == 0: sys.exit(0)
 Open_Teletext(channel,100)

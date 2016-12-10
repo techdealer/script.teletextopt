@@ -1,3 +1,6 @@
+Versão 0.2.1
+* Python version bump
+
 Versão 0.2.0
 * Limpeza de código
 * Removido o acesso ao teletexto da Sic, visto que deixou de estar disponível online
