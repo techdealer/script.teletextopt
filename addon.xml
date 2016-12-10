@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.teletextopt" name="Teletexto PT" version="0.2.0" provider-name="techdealer">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="addon.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Teletexto PT</summary>
+    <description>Este addon possibilita a consulta das páginas de teletexto dos canais portugueses.</description>
+    <platform>all</platform>
+  </extension>
+</addon>

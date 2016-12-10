@@ -1,0 +1,30 @@
+Versão 0.2.0
+* Limpeza de código
+* Removido o acesso ao teletexto da Sic, visto que deixou de estar disponível online
+
+Versão 0.1.5
+* Correcção de bugs
+
+Versão 0.1.4
+* Corrigido bug na saída do addon
+* Código do add-on melhorado
+
+Versão 0.1.3
+* Pequenas melhorias no código
+
+Versão 0.1.2
+* Adicionado novamente teletexto SIC
+
+Versão 0.1.1
+* Adicionado suporte a navegação usando controlos físicos
+* Corrigida função de saída do addon
+
+Versão 0.1.0
+* Criada uma janela personalizada para proporcionar uma mais fácil navegação entre páginas
+
+Versão 0.0.2
+* Adicionada compatibilidade ao xbmc Gotham
+* Removido o acesso ao teletexto da Sic, visto que deixou de estar disponível online
+
+Versão 0.0.1
+* Lançamento da primeira versão do addon
